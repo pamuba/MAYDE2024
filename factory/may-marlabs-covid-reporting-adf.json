@@ -1,0 +1,9 @@
+{
+	"name": "may-marlabs-covid-reporting-adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d9e4edc1-8c9d-4847-a59b-53658816c7dd",
+		"tenantId": "5ed016a0-eb35-4b61-95f8-a22df8d98711"
+	}
+}
