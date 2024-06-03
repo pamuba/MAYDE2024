@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "ingest_list",
+				"fileName": "ingest_list_three.json",
 				"container": "configs"
 			}
 		},
