@@ -23,14 +23,6 @@
 			"type": "string",
 			"defaultValue": "@{linkedService().sourceBaseURL}"
 		},
-		"tr_ingest_data_properties_ingest_data_http_parameters_sourceRelativeURL": {
-			"type": "string",
-			"defaultValue": "PythonDE/main/hospital_admissions.csv"
-		},
-		"tr_ingest_data_properties_ingest_data_http_parameters_sinkFileName": {
-			"type": "string",
-			"defaultValue": "hospital_admissions.csv"
-		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -69,12 +61,6 @@
 					},
 					"ls_http_opendata_ecdc_europe_eu_properties_typeProperties_url": {
 						"value": "[parameters('ls_http_opendata_ecdc_europe_eu_properties_typeProperties_url')]"
-					},
-					"tr_ingest_data_properties_ingest_data_http_parameters_sourceRelativeURL": {
-						"value": "[parameters('tr_ingest_data_properties_ingest_data_http_parameters_sourceRelativeURL')]"
-					},
-					"tr_ingest_data_properties_ingest_data_http_parameters_sinkFileName": {
-						"value": "[parameters('tr_ingest_data_properties_ingest_data_http_parameters_sinkFileName')]"
 					}
 				}
 			},
