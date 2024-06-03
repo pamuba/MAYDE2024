@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "may-marlabs-covid-reporting-adf"
+		},
+		"ls_ablob_covidreportingsa_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdl_accountKey": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdl_properties_typeProperties_url": {
+			"value": "https://maycovidreportingdl.dfs.core.windows.net/"
+		},
+		"ls_http_opendata_ecdc_europe_eu_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/pamuba/"
+		},
+		"tr_ingest_data_properties_ingest_data_http_parameters_sourceRelativeURL": {
+			"value": "PythonDE/main/hospital_admissions.csv"
+		},
+		"tr_ingest_data_properties_ingest_data_http_parameters_sinkFileName": {
+			"value": "hospital_admissions.csv"
+		}
+	}
+}
