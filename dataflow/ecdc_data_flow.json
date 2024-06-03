@@ -32,7 +32,6 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     inferDriftedColumnTypes: true,",
 				"     ignoreNoFilesFound: false) ~> CasesAndDeaths",
 				"CasesAndDeaths filter(continent == 'Europe' && not(isNull(country_code))) ~> FilterEuropeOnly"
 			]
