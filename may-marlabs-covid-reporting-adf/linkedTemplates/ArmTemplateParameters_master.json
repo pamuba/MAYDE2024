@@ -15,7 +15,7 @@
 			"value": "https://maycovidreportingdl.dfs.core.windows.net/"
 		},
 		"ls_http_opendata_ecdc_europe_eu_properties_typeProperties_url": {
-			"value": "https://raw.githubusercontent.com/pamuba/"
+			"value": "@{linkedService().sourceBaseURL}"
 		},
 		"tr_ingest_data_properties_ingest_data_http_parameters_sourceRelativeURL": {
 			"value": "PythonDE/main/hospital_admissions.csv"

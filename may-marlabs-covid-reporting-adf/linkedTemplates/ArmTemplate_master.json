@@ -21,7 +21,7 @@
 		},
 		"ls_http_opendata_ecdc_europe_eu_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://raw.githubusercontent.com/pamuba/"
+			"defaultValue": "@{linkedService().sourceBaseURL}"
 		},
 		"tr_ingest_data_properties_ingest_data_http_parameters_sourceRelativeURL": {
 			"type": "string",
