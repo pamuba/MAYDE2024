@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "DelimitedText1",
+						"referenceName": "df_raw_cases_deaths",
 						"type": "DatasetReference"
 					},
 					"name": "CasesAndDeaths"

@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText1",
+	"name": "df_raw_cases_deaths",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_adls_covidreportingdl",
