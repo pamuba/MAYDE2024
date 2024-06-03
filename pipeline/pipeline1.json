@@ -62,7 +62,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "sourceRelativeURL",
+								"variableName": "sourceRelative",
 								"value": {
 									"value": "@item().sourceRelativeURL",
 									"type": "Expression"
@@ -74,7 +74,7 @@
 			}
 		],
 		"variables": {
-			"sourceRelativeURL": {
+			"sourceRelative": {
 				"type": "String"
 			}
 		},
