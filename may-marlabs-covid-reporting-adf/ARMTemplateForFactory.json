@@ -705,12 +705,12 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/tr_ingest_data')]",
+			"name": "[concat(parameters('factoryName'), '/tr_ingest_ecdc_file')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Stopped",
+				"runtimeState": "Started",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -724,8 +724,8 @@
 				"typeProperties": {
 					"recurrence": {
 						"frequency": "Minute",
-						"interval": 2,
-						"startTime": "2024-05-30T19:05:00",
+						"interval": 3,
+						"startTime": "2024-06-03T18:21:00",
 						"timeZone": "India Standard Time"
 					}
 				}
