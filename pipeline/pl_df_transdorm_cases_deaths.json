@@ -1,9 +1,9 @@
 {
-	"name": "pipeline2",
+	"name": "pl_df_transdorm_cases_deaths",
 	"properties": {
 		"activities": [
 			{
-				"name": "Data flow1",
+				"name": "df_transdorm_cases_deaths",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
