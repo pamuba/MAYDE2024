@@ -18,7 +18,7 @@
 					"name": "FilterEuropeOnly"
 				},
 				{
-					"name": "select1"
+					"name": "SelectOnlyRequiredFields"
 				}
 			],
 			"scriptLines": [
@@ -40,16 +40,15 @@
 				"FilterEuropeOnly select(mapColumn(",
 				"          country,",
 				"          country_code,",
-				"          continent,",
 				"          population,",
 				"          indicator,",
 				"          daily_count,",
-				"          date,",
-				"          rate_14_day,",
-				"          source",
+				"          source,",
+				"          each(match(name == 'date'),",
+				"               \"reported_date\" = $$)",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select1"
+				"     skipDuplicateMapOutputs: true) ~> SelectOnlyRequiredFields"
 			]
 		}
 	}
