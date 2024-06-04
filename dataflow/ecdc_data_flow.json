@@ -32,6 +32,9 @@
 				},
 				{
 					"name": "LookupCountry"
+				},
+				{
+					"name": "ModifyColumns"
 				}
 			],
 			"scriptLines": [
@@ -84,7 +87,19 @@
 				"PivotCounts, CountryLookup lookup(PivotCounts@country == CountryLookup@country,",
 				"     multiple: false,",
 				"     pickup: 'any',",
-				"     broadcast: 'auto')~> LookupCountry"
+				"     broadcast: 'auto')~> LookupCountry",
+				"LookupCountry select(mapColumn(",
+				"          country = PivotCounts@country,",
+				"          country_code_2_digit,",
+				"          country_code_3_digit,",
+				"          population = PivotCounts@population,",
+				"          cases_count = {confirmed cases_count},",
+				"          deaths_count,",
+				"          reported_date,",
+				"          source",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> ModifyColumns"
 			]
 		}
 	}
