@@ -19,6 +19,9 @@
 				},
 				{
 					"name": "SelectOnlyRequiredFields"
+				},
+				{
+					"name": "PivotCounts"
 				}
 			],
 			"scriptLines": [
@@ -44,11 +47,20 @@
 				"          indicator,",
 				"          daily_count,",
 				"          source,",
-				"          each(match(name == 'date'),",
+				"          each(match(name=='date'),",
 				"               \"reported_date\" = $$)",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> SelectOnlyRequiredFields"
+				"     skipDuplicateMapOutputs: true) ~> SelectOnlyRequiredFields",
+				"SelectOnlyRequiredFields pivot(groupBy(country,",
+				"          country_code,",
+				"          population,",
+				"          source,",
+				"          reported_date),",
+				"     pivotBy(indicator),",
+				"     count = sum(daily_count),",
+				"     columnNaming: '$N$V',",
+				"     lateral: false) ~> PivotCounts"
 			]
 		}
 	}
