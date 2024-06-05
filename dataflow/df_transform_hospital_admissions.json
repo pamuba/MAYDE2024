@@ -46,8 +46,7 @@
 					"description": "Conditional Split"
 				},
 				{
-					"name": "DerivedECDCYearWeek",
-					"description": "DerivedECDCYearWeek"
+					"name": "AggregateDate"
 				}
 			],
 			"scriptLines": [
@@ -119,7 +118,9 @@
 				"     skipDuplicateMapOutputs: true) ~> SelectRequiredFields2",
 				"SelectRequiredFields2 split(indicator == 'Weekly new hospital admissions per 100k' || indicator == 'Weekly new ICU admissions per 100k',",
 				"     disjoint: false) ~> SplitDailyFromWeekly@(Weekly, Daily)",
-				"DimDateSouce derive(ecdc_year_week = toString(year) + '-W' + lpad(toString(week_of_year),2,'0')) ~> DerivedECDCYearWeek"
+				"DimDateSouce aggregate(groupBy(ecdc_year_week = toString(year) + '-W' + lpad(toString(week_of_year),2,'0')),",
+				"     week_start_date = min(date),",
+				"          week_end_date = max(date)) ~> AggregateDate"
 			]
 		}
 	}
