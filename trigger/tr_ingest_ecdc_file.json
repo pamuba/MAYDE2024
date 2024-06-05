@@ -2,7 +2,7 @@
 	"name": "tr_ingest_ecdc_file",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
