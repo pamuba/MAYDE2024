@@ -22,10 +22,12 @@
 			"sinks": [],
 			"transformations": [
 				{
-					"name": "SelectRequiredFields"
+					"name": "SelectRequiredFields",
+					"description": "Select Required Fields"
 				},
 				{
-					"name": "LookupCountry"
+					"name": "LookupCountry",
+					"description": "Lookup"
 				}
 			],
 			"scriptLines": [
