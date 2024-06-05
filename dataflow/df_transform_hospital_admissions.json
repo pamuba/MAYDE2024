@@ -47,6 +47,9 @@
 				},
 				{
 					"name": "AggregateDate"
+				},
+				{
+					"name": "JoinWithDate"
 				}
 			],
 			"scriptLines": [
@@ -120,7 +123,12 @@
 				"     disjoint: false) ~> SplitDailyFromWeekly@(Weekly, Daily)",
 				"DimDateSouce aggregate(groupBy(ecdc_year_week = toString(year) + '-W' + lpad(toString(week_of_year),2,'0')),",
 				"     week_start_date = min(date),",
-				"          week_end_date = max(date)) ~> AggregateDate"
+				"          week_end_date = max(date)) ~> AggregateDate",
+				"SplitDailyFromWeekly@Weekly join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"     joinType:'inner',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> JoinWithDate"
 			]
 		}
 	}

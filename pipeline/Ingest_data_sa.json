@@ -73,31 +73,6 @@
 						"value": "@equals(activity('Get Metadata').output.columnCount, 13)",
 						"type": "Expression"
 					},
-					"ifFalseActivities": [
-						{
-							"name": "Web1",
-							"type": "WebActivity",
-							"dependsOn": [],
-							"policy": {
-								"timeout": "0.12:00:00",
-								"retry": 0,
-								"retryIntervalInSeconds": 30,
-								"secureOutput": false,
-								"secureInput": false
-							},
-							"userProperties": [],
-							"typeProperties": {
-								"method": "POST",
-								"url": "https://copysuccessemail24.azurewebsites.net",
-								"body": {
-									"message": "This is a custom dynamic message from your pipeline with run ID @{pipeline().RunId}.",
-									"dataFactoryName": "@{pipeline().DataFactory}",
-									"pipelineName": "@{pipeline().Pipeline}",
-									"receiver": "sureshakulas1420@gmail.com"
-								}
-							}
-						}
-					],
 					"ifTrueActivities": [
 						{
 							"name": "Copy data",
